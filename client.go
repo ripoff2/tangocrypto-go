@@ -51,4 +51,7 @@ type APIClient interface {
 	AddressSummary(ctx context.Context, address string) (AddressSummary, error)
 	AddressUTXOs(ctx context.Context, address string) (AddrUTXOs, error)
 	TransactionSubmit(ctx context.Context, cbor []byte) (string, error)
+	ProtocolParameters(ctx context.Context, epochNumber string) (EpochParameters, error)
+	CurrentEpoch(ctx context.Context) (CurrentEpoch, error)
+	LatestBlock(ctx context.Context) (LatestBlock, error)
 }

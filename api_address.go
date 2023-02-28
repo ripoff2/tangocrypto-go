@@ -106,7 +106,7 @@ func (c *apiClient) AddressSummary(ctx context.Context, address string) (address
 // TODO: add pagination support
 // add query params to the request
 func (c *apiClient) AddressUTXOs(ctx context.Context, address string) (utxos AddrUTXOs, err error) {
-	requestURL, err := url.Parse(fmt.Sprintf("%s/%s/v1/%s/%s/%s", c.server, c.appID, resourceAddress, address, resourceUTXOs))
+	requestURL, err := url.Parse(fmt.Sprintf("%s/%s/v1/%s/%s/%s", c.server, c.appID, resourceAddresses, address, resourceUTXOs))
 	if err != nil {
 		return
 	}
